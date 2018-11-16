@@ -89,7 +89,7 @@ public class ConsumerDemoByOffset {
                 System.out.println(value);
                 // 记录topic下每个partition的OffSet到本地文件
                 try {
-                    rewriteendline("F:/Kafka/KafkaOffsetLog/" + record.partition() + ".txt", String.valueOf(record.offset()));
+                    rewriteendline("F:/Kafka/KafkaOffsetLog/" + record.partition() + ".txt", String.valueOf(record.offset()+1));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
